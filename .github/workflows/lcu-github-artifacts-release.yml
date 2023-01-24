@@ -1,13 +1,10 @@
-name: GitHub Artifacts - Release
+name: fathym/baserow-landing-page
 
 on:
   push:
     branches: [main]
   pull_request:
     branches: [main]
-  repository_dispatch:
-    types: [plasmic]  
-  workflow_dispatch:
 
 permissions: write-all
 
@@ -16,7 +13,7 @@ env:
   Branches: main
   MainBranch: main
   NPMRegistry: https://registry.npmjs.org/
-  InstallCommand: npm ci
+  InstallCommand: npm i
   BuildCommand: npm run build
   Output: ./public
 
